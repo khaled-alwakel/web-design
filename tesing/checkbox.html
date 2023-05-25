@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/all.min.css">
+        <title>Document</title>
+        <style>
+            .holder{
+                margin: 40px auto;
+                width: 600px;
+            }
+            .holder > div{
+                width: 300px;
+                padding: 20px;
+                background: #eee;
+                margin-bottom: 10px;
+            }
+            .holder input[type="checkbox"] {
+                -webkit-appearance: none;
+                appearance: none;
+            }
+            .holder label{
+                position: relative;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+            .holder label:before{
+                content: "";
+                width: 25px;
+                height: 20px;
+                background-color: #ddd;
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                right: 10px;
+                border: 1px solid #ccc;
+            }
+            .holder input[type="checkbox"]:checked + label:after{
+                font-family: 'fontawesome';
+                /* unicode of the checked icon  */
+                content:"\f00c"; 
+                color:#1c96c6;
+                position: absolute;
+                left: -10px;
+                top: -10px;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="holder">
+            <div>
+                <input type="checkbox" id="check1">
+                <label for="check1"> check 1</label>
+            </div>
+            <div>
+                <input type="checkbox" id="check2">
+                <label for="check2"> check 2</label>
+            </div>
+            <div>
+                <input type="checkbox" id="check3">
+                <label for="check3"> check 3</label>
+            </div>
+        </div>
+    </body>
+</html>

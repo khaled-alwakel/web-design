@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          
+            
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none ;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-size:14px
+}
+body{
+    width: 1100vh;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background-color: var(--color-background);
+    user-select: none;
+  
+    color: var(--color-dark);
+}
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+.aside{
+    height: 100%;
+    background-color: black;
+
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6rem;
+}
+.container > div{
+    background: white;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>aside</div>
+            <div class="main">
+                <div class="under">
+                    <img src="images/city.jpg" alt="">
+                </div>
+                <div class="above"> 
+                    <p><strong>this is california</strong> </p>
+                    <p>hover to see the city</p>
+                    <div class="above-child">2</div>
+                </div>
+                <div class="above"> 
+                    <p><strong>this is california</strong> </p>
+                    <p>hover to see the city</p>
+                    <div class="above-child">2</div>
+                </div>
+            </div>
+           
+        </div>
+    </body>
+</html>

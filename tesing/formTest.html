@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>form</title>
+   <style>
+      *{
+         text-transform: capitalize;
+         font-weight: bold;
+      }
+
+      section{
+         width: 70%;
+         margin: auto;
+      }
+      fieldset{
+         background-color: #eee ;
+         padding: 10px;
+         border: 1px solid black;
+      }
+
+      legend{
+         border: 1px solid black;
+         background-color:lightblue;
+         padding: 5px;
+         margin-bottom: 10px;
+      }
+   </style>
+   <script>
+      function sayHello()
+      {
+         alert("hello world");
+      }
+   </script>
+</head>
+<body>
+   <section>
+      <h1>Register</h1>
+      <form  name = "register"  action = "" method ="" >
+   
+         <fieldset>
+            <legend>personal information</legend>
+            <label>username</label>
+            <input type="text"  name = "username" placeholder="type your name" maxlength="10">
+            <label>password</label>
+            <input type="password" name ="password"><br><br>
+            <label for="">your message</label><br>
+            <textarea name="" id="" cols="60" rows="5" readonly>this is a read only  text area</textarea><br>
+            <label for="">upload your cv</label>
+            <input type="file"><br><br>
+            <select name="gender">
+               <option disabled selected>gender</option>
+               <option value= "male"> male </option>
+               <option value= "female"> female </option>
+               <option value= "other"> other</option>
+            </select><br><br>
+            <label for="">remember me </label>
+            <input type="checkbox" name="" id=""><br><br>
+            </fieldset>
+            <br><br>
+      
+         <fieldset>
+            <legend>your favorites</legend>
+            <label for="">choose your favorite browser</label>
+            <input type="radio" name = "browser"  value = "chrome"> chrome
+            <input type="radio" name = "browser"  value = "opera"> opera
+            <input type="radio" name = "browser"  value = "safari"> safari <br>
+            <label for="">choose your favorite mobile</label>
+            <input type="radio" name = "iphone"  value = "iphone"> iphone
+            <input type="radio" name = "samsung"  value = "samsung"> samsung
+            <input type="radio" name = "nokia"  value = "nokia"> nokia
+         </fieldset>
+         <br>
+         <fieldset>
+            <legend>send options</legend>
+            <input type="submit" value="sign up">
+            <input type="button" name="say hello" value="say hello" onclick="sayHello()">
+            <input type="reset" value="restore default">
+            <input type="hidden" value="test">
+   
+            <select name="time" size="2" multiple>
+               <optgroup label="time"></optgroup>> <!--i can disable optgroup itself-->
+                  <option value= "now"> now </option>
+                  <option value= "tomorrow"> tomorrow </option>
+                  <option value= "after a week"> after a week</option>
+                  <option value= "after a month"> after a month</option>
+               </optgroup>
+            </select>
+            
+         </fieldset>
+    
+      </form>
+   
+   </section>
+ 
+</body>
+</html>

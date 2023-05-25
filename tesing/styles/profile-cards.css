@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+a,a:hover{ text-decoration: none;}
+
+body{background-color: #0a050e;}
+
+.container{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card{ 
+    display: flex;
+    height: 350px;
+    width: 250px;
+    cursor: pointer;
+    box-shadow:  -1rem 0 3rem #000;
+    margin-left: -50px;
+    position: relative;
+    left: 0;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+    background-image:radial-gradient(circle farthest-corner at 10% 20%,rgba(6,123,239,1)14.2%,rgba(219,115,249,1)89.5%) ;
+}
+.card:not(:first-child){
+    margin-left: -80px;
+}
+.card:hover{
+    transform: translatey(-20px);
+    transition: 0.4s ease-in-out;
+    background-image:radial-gradient(circle 523px at 7.1% 19.3%, rgba(147,15,255,1) 2%,rgba(5,49,255,1)100.7%);
+}
+.card:hover ~.card{
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-in-out;
+}
+.title{
+    color: #fff;
+    font-size:14px;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    text-transform: capitalize;
+}
+.bar{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    height: 3px;
+    width: 250px;
+}
+.emptybar{
+background-color: #2e3033;
+width: 75%;
+height: 100%;
+}
+.filledbar{
+    position: absolute;
+    top: 0;
+    background-color: #06f745;
+    transition:.4s ease-in-out ;
+    height: 100%;
+    width: 0;
+    z-index: 3;
+}
+ .card:hover .filledbar{
+     width: 150px;
+     transition: 0.4s ease-in-out;
+ }
+.profile-detail{
+    width: 100%;
+    position: absolute;
+}
+.profile-detail img{
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    border-radius: 50%;
+}
+.profile-detail .name{
+    font-size: 1rem;
+    font-weight: 700;
+    position: absolute;
+    top: 165px;
+    left: 20px;
+    color: #fff;
+    text-transform: capitalize;
+
+}
+.profile-detail .post-title{
+    position: absolute;
+    top: 194px;
+    left: 20px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.profile-detail .post-describtion{
+    position: absolute;
+    top: 225px;
+    left: 20px;
+    color: #fff;
+    font-size: 12px;
+    padding-right: 60px ;
+}
+.profile-detail .button{
+    font-size: 10px;
+    padding: 5px 0;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    width: 135px;
+    border: 1px solid #eef13b;
+    color: #040404;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #eef13b;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+

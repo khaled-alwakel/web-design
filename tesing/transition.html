@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       
+        <link rel="stylesheet" href="styles/transition.css">
+        <title>Document</title>
+        <style>
+            /* transition: property- duration-funcition*/
+*{
+    box-sizing:border-box;
+    font-size:32px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+div {  
+    width: 1000px;
+}
+p{
+    width: 200px;
+    height:100px;
+    padding:10px ;
+    margin: 10px;
+    background-color: lightblue;
+    transition-duration: 3s; 
+    transition-property: all; /* all div content color and background and width etc [all is the default]  u can reset by none
+    if there is more than one property use , to set time for next*/ 
+} 
+/*div:hover only wont work this to make all p get in action */
+div:hover p { 
+    width: 600px;
+    height:100px;
+    padding:10px ;
+    margin: 10px;
+    background-color:darkblue;
+    transition-delay: 1s; /* actions will start after 2 seconds*/
+    
+}
+ p:first-of-type{
+    transition-timing-function: ease;
+}
+ p:nth-of-type(2){
+    transition-timing-function: linear;
+}
+di p:nth-of-type(3){
+    transition-timing-function: ease-in;
+}
+ p:nth-of-type(4){
+    transition-timing-function: ease-out;
+}
+p:nth-of-type(5){
+    transition-timing-function: ease-in-out;
+}
+p:nth-of-type(6){
+    transition-timing-function: steps(1,start); 
+    /* 1 means 1 step-- start means the transition will be start with the start of time */
+}
+p:last-of-type{
+    transition-timing-function: steps(1,end); 
+    /*end  means the transition will be start with the end of time-- this is default */
+}
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>this is  ease </p>
+            <p>this is linear </p>
+            <p>this is  ease-in </p>
+            <p>this is ease-out </p>
+            <p>this is eas-in-out</p>
+            <p>this is steps start</p>
+            <p>this is steps end</p>
+        </div>
+    </body>
+</html>

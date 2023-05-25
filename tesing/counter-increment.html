@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 20px;
+        
+        }
+        body{
+            /* you can add more than one counter next to each other directly*/
+            counter-reset: my-ct 0 ;/*default is zero so here it will count from 6*/
+        }
+        h1{
+            counter-reset: sub-ct;
+        }
+        h1:before{
+            counter-increment: my-ct 1; /*default is 0 here it will ad 2number each time*/
+            content: counter(my-ct) ")";
+        }
+        p:before{
+            counter-increment: sub-ct ;
+            content: counter(my-ct,upper-roman) "." counter(sub-ct) "/";
+        }
+
+    </style>
+</head>
+<body>
+<h1>html</h1>
+<p>div</p>
+<p>span</p>
+<h1>css</h1>
+<p>flex box</p>
+<p>animation</p>
+<h1>javascript</h1>
+<p>variables</p>
+<p>array</p>
+
+</body>
+</html>

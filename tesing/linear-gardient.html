@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <title>Document</title>
+        <style>
+            *{ box-sizing: border-box;}
+            h1{
+                margin: 125px auto;
+                text-align: center;
+            }
+            .linear,.radial,.colors,.black,.palette,.awsm-color{
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
+            }
+            .linear>div,  .radial>div,  .colors div, .black div,.palette div,.awsm-color div{
+                width: 800px;
+                height: 300px;
+            }
+            /*.div-one{ background:-webkit-linear-gradient(direction,[first color] [end point],[second] [start point]);} */
+            .linear .div-one{ background:-webkit-linear-gradient(120deg,#ffde59 50%,#e45d0b 50%);}
+            .linear .div-two{ background:-webkit-linear-gradient( left,#30e9ff,#0d0551);}
+            .linear .div-three{ background:-webkit-linear-gradient( right,#cab9f1,#71254e);}
+            .linear .div-four{ background:-webkit-linear-gradient(bottom,#47001c,#971132);}
+            .linear .div-five{ background:-webkit-linear-gradient(top left ,#652410,#fac697);}
+            .linear .div-six{ background:-webkit-linear-gradient(top right,#79081c,#ff9e01);}
+            .linear .div-seven{ background:-webkit-linear-gradient(top left,#8da05e,#e9ede0,#fdbf50,#2a2c41);}
+            .linear .div-eight{ background:-webkit-linear-gradient(top left,#ffde59,#e45d0b);}
+
+            /* radial gradient  */
+            /*  .radial.div-one{ background:radial-gradient(x y , circle [first color] ,[ second color] );} */
+                                                          
+        .radial{ background:-webkit-radial-gradient(30% 20%,farthest-corner,#e45d0b ,rgb(168, 72, 25),#fdbf50,gold,rgb(197, 91, 165),#2a2c41)};   /* center is default 50% 50% */
+           
+
+            .colors div:nth-child(1){background-color: #e7e7e7;}
+            .colors div:nth-child(2){background-color: #d1d1d1;}
+            .colors div:nth-child(3){background-color: #b6b6b6;}
+            .colors div:nth-child(4){background-color: #9b9b9b;}
+            .colors div:nth-child(5){background-color: #4a707a;}
+            .colors div:nth-child(6){background-color: #7697a0;}
+            .colors div:nth-child(7){background-color: #94b0b7;}
+            .colors div:nth-child(8){background-color: #c2c8c5;}
+            .colors div:nth-child(9){background-color: #ddddda;}
+            
+            .palette div:nth-child(1){background-color: #8da05e;}
+            .palette div:nth-child(2){background-color: #e9ede0;}
+            .palette div:nth-child(3){background-color: #fdbf50;}
+            .palette div:nth-child(4){background-color: #2a2c41;}
+
+            .awsm-color div:nth-child(1){background-color: #777d71;}
+            .awsm-color div:nth-child(2){background-color: #bbd38b;}
+            .awsm-color div:nth-child(3){background-color: #f7f6e7;}
+            .awsm-color div:nth-child(4){background-color: #dfddc5;}
+        </style>
+    </head>
+    <body>
+            <div class="linear">
+                <div class="div-one"><h1>120deg width 50% end for two color</h1></div>
+                <div class="div-two"><h1>left</h1></div>
+                <div class="div-three"> <h1>right</h1></div>
+                <div class="div-four"><h1>bottom</h1></div>
+                <div class="div-five"><h1>top left</h1></div>
+                <div class="div-six"><h1>top right</h1></div>
+                <div class="div-seven"><h1>i can add many colors</h1></div>
+                <div class="div-eight"></div>
+            </div>
+        
+            <div class="radial"><h1>radial greadient</h1></div>
+              
+
+            <div class="colors">
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+            </div>
+
+            <div class="black">
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+            </div>
+            <div class="palette">
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+            </div>
+            <div class="awsm-color">
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+                <div class="div"></div>
+            </div>
+     
+    </body>
+</html>

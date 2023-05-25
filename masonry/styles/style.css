@@ -1,0 +1,104 @@
+/* main rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222  ;
+}  
+h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin: 50px;
+    background-color: #333;
+    padding: 20px;
+    direction: rtl;
+    text-align: center;
+    border: 2px solid #000
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+.container{
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: minmax(100px,auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+  
+}
+.container .box{
+    color:#929796;
+    background-color: #333;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    border: 2px solid #000
+}
+.container .box:hover{
+    background-color: #d3688b;
+    cursor: pointer;
+}
+.container .box img{
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.container .box:nth-child(1){grid-area: wash;}
+.container .box:nth-child(2){ grid-area: sneez;}
+.container .box:nth-child(3){grid-area: travel}
+.container .box:nth-child(4){grid-area: kit;}
+.container .box:nth-child(5){grid-area: mask;}
+.container .box:nth-child(6){grid-area: food;}
+.container .box:nth-child(7){ grid-area: cat;}
+
+@media (max-width:991px){
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+    .container .box{
+      display: block !important
+    }
+
+}
+@media (min-width:992px) and (max-width:1199px){
+    .container{
+        grid-template-areas: 
+        "wash wash wash sneez "
+        "travel kit kit sneez "
+        "food kit kit cat"
+        "mask mask mask mask"
+    }
+  
+
+}
+@media  (min-width:1200px){
+    .container{
+        grid-template-areas: 
+        "wash wash sneez travel"
+        "kit food sneez cat "
+        "kit mask mask mask"
+    }
+ 
+
+}
+
+

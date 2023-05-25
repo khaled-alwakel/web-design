@@ -1,0 +1,14 @@
+{
+    "folders": [
+		{
+			"path": "..\\..\\..\\computer science\\CS50\\cs50-projects"
+		},
+		{
+			"path": ".."
+		}
+	],
+    "settings": {
+        "code-runner.runInTerminal": true,
+        "liveServer.settings.multiRootWorkspaceName": "MY_WORK"
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+*{ margin:0; box-sizing:border-box}
+
+.container{
+    width:250px;
+    height:50px;
+    margin:10px;
+    float:left;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    text-align:center;
+}
+.container .box{
+    height:50px;
+    line-height: 50px;
+    position: relative;
+    color:#fff;
+    z-index: 2;
+}
+.container a{
+    display: inline-block;
+    height:50px;
+    line-height: 50px;
+    background-color: #333;
+    width:100%;
+    color:#fff;
+    text-decoration: none;
+    position: relative;
+    top:-50px;
+    z-index: 1;
+}
+.normal:before{
+    display: block;
+    padding:10px;
+    margin-bottom:10px;
+    content: "normal hover";
+    text-transform: uppercase;
+}
+.transition:before{
+    display: block;
+    padding:10px;
+    margin-bottom:10px;
+    content: "transition hover";
+    text-transform: uppercase;
+}
+.animation:before{
+    display: block;
+    padding:10px;
+    margin-bottom:10px;
+    content: "animation hover";
+    text-transform: uppercase;
+}
+.normal .box{background-color: #62c8f8;}
+
+.transition .box{ background-color: #3b5998;}
+
+.animation .box{ background-color: #c8302a;}
+
+.container:hover a{  top:0px;}
+
+.transition a{ transition:all .5s ease-in-out;}
+
+.animation:hover a{animation: swinging .5s  ease-in-out;transform-origin: top;}
+
+@keyframes swinging{
+    0%{
+        transform: rotateX(-50deg);
+    }
+    50%{
+        transform: rotateX(50deg);
+    }
+    
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="container normal">
+            <div class="box">follow me at twitter</div>
+            <a href="#">@khaled alwakel</a>
+        </div>
+        <div class="container transition">
+            <div class="box">follow me at facebook</div>
+            <a href="#">khaled alwakel</a>
+        </div>
+        <div class="container animation">
+            <div class="box">subscribe on youtube</div>
+            <a href="#">khaled alwakel</a>
+        </div>
+    </body>
+</html>

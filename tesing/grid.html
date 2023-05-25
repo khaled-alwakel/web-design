@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        text-transform: capitalize;
+      }
+      body{
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+          .header{
+            background-color: #00f;
+            grid-area: h;
+          }
+          .aside{
+            background-color: #f00;
+            grid-area: a;
+          }
+          .section{
+            background-color: #f50;
+            grid-area: s;
+          }
+          .footer{
+            background-color: grey;
+            grid-area: f;
+          }
+       
+        .container{
+            height: 800px;
+            border: 2px solid #000;
+            display: grid;
+            text-align: center;
+            font-size: 2rem;
+            /* grid-template: repeat(2,100px) / repeat(3,1fr); short hand*/
+
+            grid-template-columns: repeat(3,1fr) ;
+            grid-template-rows: minmax(100px,auto); /*minmax*/ 
+            grid-gap: 5px;
+            grid-template-areas:
+            "h h h h h "
+            "a s s s s " 
+            "f f f f f";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"> 
+          <h1>welcome to my grid</h1>
+        </div>
+        <div class="aside">
+          <h2>aside</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolor reiciendis. Provident laboriosam possimus itaque sed! Quasi suscipit saepe, fugit voluptatibus nisi pariatur blanditiis, alias ullam tempora nulla unde sit.
+          </p>
+        </div>
+        <div class="section">
+          <h2>section</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem consequatur adipisci provident, illum maiores est laborum quisquam saepe beatae, quia consectetur, soluta quos! Repellat voluptatum nihil consectetur labore cupiditate dicta?
+          </p>
+        </div>
+     
+        <div class="footer">
+          <h2>footer</h2>
+        </div>
+        
+
+    </div>
+</body>
+</html>

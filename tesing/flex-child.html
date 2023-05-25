@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+    font-weight: bold;
+    font-size:62px;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #999;
+}
+h2{
+    font-weight: bold;
+    font-size:30px;
+    margin: 10px auto;
+    text-transform: uppercase;
+}
+.container{
+    border:2px solid #00f;
+    width: 500px;
+    height:300px;
+    margin:20px;
+    display: flex; 
+}
+.container div{
+        width: 100px;
+        height:100px;
+        padding:10px ;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color:#00f; 
+        background-color:lightseagreen;
+       
+    }
+   .order{
+    border:2px solid #00f;
+    width: 500px;
+    height:300px;
+    margin:20px;
+    display: flex; 
+   }
+   .order div{
+    width: 100px;
+        height:100px;
+        padding:10px ;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color:#00f; 
+        background-color:rgb(218, 155, 21);
+   }
+    .order .two{
+      order: 1;  /* the div two become the first div co i gave it order 1*/
+    }
+    .grow{
+        border:2px solid #00f;
+    width: 500px;
+    height:300px;
+    margin:20px;
+    display: flex; 
+    }
+    .grow div {
+        width: 100px;
+        height:100px;
+        padding:10px ;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color:#00f; 
+        background-color:lightblue;
+    }
+    .grow .two{ flex-grow: 1; /* default value is 0*/}
+
+    .shrink{
+        border:2px solid #00f;
+        width: 500px;
+        height:300px;
+        margin:20px;
+        display: flex; 
+    }
+    .shrink div {
+       flex-basis: 300px;
+        height:100px;
+        padding:10px ;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color:#00f; 
+        background-color:lightpink;
+    }
+    .shrink .two{ flex-shrink:2;  /* default value is 1*/}
+
+    .no-shrink{
+        border:2px solid #00f;
+        width: 300px;
+        height:300px;
+        margin:20px;
+        display: flex; 
+    }
+    .no-shrink div {
+        width: 100px;
+        height:100px;
+        padding:10px ;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color:#00f; 
+        background-color:lightpink;
+    }
+    .no-shrink .two{
+        flex-shrink:0;  /* default value is 1*/ /* if zero it will never shrink */
+    }
+    /* flex grow take the left over space and add it to the width of the child div 
+    if you gave two child div grow 1 the left over space will devided to them according to the value you gave to it
+    but flex basis tell the   flex box where  to start growing
+    if you want one is the double width make flex-basis for two 0 and grow 2 for the big one and grow 1 for the small one  
+    align -self override align content*/
+    .basis{
+    border:2px solid #00f;
+    width: 500px;
+    height:300px;
+    margin:20px;
+    display: flex; 
+    }
+    .basis div {
+        width: 100px;
+        height:100px;
+        padding:10px ;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color:#00f; 
+        background-color:lightpink;
+    }
+    .basis .two{
+        flex-basis: 200px; /* auto is the default*/
+    }
+    .shorthand{
+    font-weight: bold;
+    font-size:30px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    color:midnightblue;
+    border:5px solid #00f;
+    width: 500px;
+    height:300px;
+    text-align:center
+    }
+    .shorthand h3{
+        color:red
+    }
+    .shorthand p {
+        color:rgb(104, 32, 175)
+    }
+
+        </style>
+    </head>
+    <body>
+    
+        <h1>this is flex-order</h1>
+        <h2>this is normal order</h2>
+        <div class="container">
+            <div class="one">div 1</div>
+            <div class="two">div 2</div>
+            <div class="three">div 3</div>
+        </div>
+        <h2>this is free order {i moved 3 to 2 }</h2>
+        <div class="order">
+            <div class="one">div 1</div>
+            <div >div 2</div>
+            <div class="three">div 3</div>
+        </div>
+        <hr>
+        <h2>this is flex-grow  [see how div 2 grow if you make container wider]</h2>
+        <div class="grow">
+            <div class="one">div 1</div>
+            <div class="two">div 2</div>
+            <div class="three">div 3</div>
+        </div>
+        <hr>
+        <h2>this is flex-shrink  [see how div 2 shrink if you make container narrower]</h2>
+        <div class="shrink">
+            <div class="one">div 1</div>
+            <div class="two">div 2</div>
+            <div class="three">div 3</div>
+        </div>
+        <h2>if flex-shrink is zero it will never shrink </h2>
+        <div class="no-shrink">
+            <div class="one">div 1</div>
+            <div class="two">div 2</div>
+            <div class="three">div 3</div>
+        </div>
+        <h2>this is flex-basis</h2> <!--felx-basis set the width of div inside container it will not changes but if container is more smaller than the divs's width inside it the width will be approximately to the value you have givven to it -->
+        <div class="basis">
+            <div class="one">div 1</div>
+            <div class="two">div 2</div>
+            <div class="three">div 3</div>
+        </div>
+        <div class="shorthand">
+            <h3>flex shorthand</h3>
+            <hr>
+            <p>flex:0 1 auto</p>
+            <p>flex:grow shrink basis</p>
+        </div>
+    
+    
+    
+    
+    
+    </body>
+</html>

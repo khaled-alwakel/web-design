@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="timelime" content="hello this is my time line">
+        <title>timeline</title>
+    </head>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{background-color: darkslategray;}
+        .time-line{
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+        .time-line:after{ /*this is must to be set to this div so that the line will continue when you add more containers*/
+            content: "";
+            position: absolute;
+            width: 6px;
+            top: 0;
+            bottom: 0; /* top 0 and bottom 0 means it will take the whole height*/
+            left: 50%;
+            margin-left: -3px;
+            background-color: #fff;
+        }
+        .container{
+            width: 50%;
+            padding: 10px 30px ;
+            position: relative;
+        }
+        .content{
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 5px;
+        }
+        .container:after{
+            content: "";
+            position:absolute;
+            width:25px;
+            height:25px;
+            border-radius: 50%;
+            background-color: #fff;
+            right: -17px;
+            top: 15px;
+            border: 4px solid #f50;
+            z-index: 10;
+        }
+        .container.right{left: 50%;} /*dont make right 0 coz it relative and it wont work ,it will work with absolute */
+
+        .container.left:before, .container.right:before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid #fff;
+            right: 10px;
+            top: 22px;
+        }
+        .container.right:before{
+            border-top: 10px solid transparent;
+            border-right: 10px solid #fff;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            left: 10px;
+        }
+        .container.right::after{left: -17px;}
+        /*media query*/
+
+        @media(max-width: 600px){
+            .time-line::after{
+                left: 20px;
+            }
+
+            .container{
+                width: 100%;
+                padding-left: 70px;
+                padding-right:20px
+            }
+          
+            .container.right{
+                left: 2px;
+            }
+            .container.right:after,.container.left:after{
+                left: 3px;
+            }
+            .container.right:before, .container.left:before{
+                left:50px;
+                top: 22px;
+                border-top: 10px solid transparent;
+                border-right: 10px solid #fff;
+                border-bottom: 10px solid transparent;
+                border-left: 10px solid transparent;
+            }
+        }
+    </style>
+    <body>
+        <div class="time-line">
+            <div class="container left">
+                <div class="content ">
+                    <h2>2010</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste omnis asperiores quas expedita. Distinctio ipsum illum quod est. Quo, quis!</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content ">
+                    <h2>2020 </h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste omnis asperiores quas expedita. Distinctio ipsum illum quod est. Quo, quis!</p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content ">
+                    <h2>2010</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste omnis asperiores quas expedita. Distinctio ipsum illum quod est. Quo, quis!</p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content ">
+                    <h2>2020 </h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste omnis asperiores quas expedita. Distinctio ipsum illum quod est. Quo, quis!</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>pricing planes</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">mega cloud</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricingplanes.html">pricing planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html" ">gallery</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">testimonials</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+        <!-- start pricing table -->
+    <section class="pricing-table txt-center">
+        <div class="container">
+            <h2 class="h1 ">our pricing planes</h2>
+            <div class="pricing-plans">
+                <div class="pricing-plan">
+                    <h3>plus</h3>
+                    <span class="pricing">$10</span>
+                    <ul class="unstyled ">
+                        <li>disk space : 20 GB </li>
+                        <li>bandwith : 100 GB</li>
+                        <li>ftp account : 5</li>
+                        <li>database : 10</li>
+                        <li>free domain</li>
+                    </ul>
+                    <button class = "plus">buy now</button>
+                    <p class="feedback1"></p>
+                </div>
+                <div class="pricing-plan">
+                    <h3>premium</h3>
+                    <span class="pricing">$20</span>
+                    <ul class="unstyled ">
+                        <li>disk space : 50 GB</li>
+                        <li>bandwith : 200 GB</li>
+                        <li>ftp account : 15</li>
+                        <li>database : 20</li>
+                        <li>free domain</li>
+                    </ul>
+                    <button class = "premium">buy now</button>
+                    <p class="feedback2"></p>
+                </div>
+                <div class="pricing-plan large">
+                    <h3>ultimate</h3>
+                    <span class="pricing">$50</span>
+                    <ul class="unstyled ">
+                        <li>disk space : 100 GB</li>
+                        <li>bandwith : 500 GB</li>
+                        <li>ftp account :25</li>
+                        <li>database : 30</li>
+                        <li>free domain</li>
+                    </ul>
+                    <button class = "ultimate">buy now</button>
+                    <p class="feedback3"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end pricing table -->
+         <script>
+
+            let plus = document.querySelector('.plus');
+            plus.addEventListener('click', function() {
+                plus.style.backgroundColor = 'green';
+                plus.style.color ='white';
+                let f1 = document.querySelector('.feedback1');
+                f1.innerHTML = ' you are now using plus plane';
+                f1.style.border = '2px solid green';
+            });
+            let premium = document.querySelector('.premium');
+            premium.addEventListener('click', function() {
+                premium.style.backgroundColor = 'blue';
+                premium.style.color ='white';
+               let f2 = document.querySelector('.feedback2');
+                f2.innerHTML = ' you are now using premium plane';
+                f2.style.border = '2px solid blue';
+
+            });
+            let ultimate = document.querySelector('.ultimate');
+            ultimate.addEventListener('click', function() {
+                ultimate.style.backgroundColor = 'red';
+                ultimate.style.color ='white';
+               let f3 = document.querySelector('.feedback3');
+                f3.innerHTML = ' you are now using ultimate plane';
+                f3.style.border = '2px solid red';;
+            });
+        </script>
+    </body>
+</html>

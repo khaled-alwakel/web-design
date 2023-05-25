@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/all.min.css">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                text-decoration: none
+            }
+
+            .middle{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .menu{
+                width: 300px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .item{
+                border-top: 1px solid #2980b9;
+                overflow: hidden;
+            }
+            .btn{
+                display: block;
+                padding: 16px 20px;
+                background-color: #3498db;
+                position: relative;
+                color: #fff;
+            }
+            .btn:before{
+                content: "";
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                background-color: #3498db;
+                left: 20px;
+                bottom: -7px;
+                transform: rotate(45deg);
+            }
+            .btn i{
+                margin-right: 10px;
+            }
+            .submenu{
+                background-color: #333;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.3s ease-in-out;
+            }
+            .submenu a{
+                display: block;
+                padding: 16px 26px;
+                color: #fff;
+                margin:5px 0;
+                position: relative;
+            }
+            .submenu a:before{
+                content: "";
+                position: absolute;
+                width: 6px;
+                height: 100%;
+                background-color: #3498db;
+                left: 0;
+                top: 0;
+                opacity: 0;
+            }
+            .submenu a:hover:before{
+                opacity: 1;
+            }
+            .item:target .submenu{
+                max-height:10em ;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="middle">
+            <div class="menu">
+                <li class="item" id="profile">
+                    <a href="#profile" class="btn"><i class="fas fa-user"></i>profiles</a>
+                    <div class="submenu">
+                        <a href="#">posts</a>
+                        <a href="#">pictures</a>
+                    </div>
+                </li>
+                <li class="item" id="messages">
+                    <a href="#messages" class="btn"><i class=" far fa-envelope "></i>messages</a>
+                    <div class="submenu">
+                        <a href="#">new</a>
+                        <a href="#">send</a>
+                        <a href="#">spam</a>
+                    </div>
+                </li>
+                <li class="item" id="settings">
+                    <a href="#settings" class="btn"><i class="fa fa-cogs "></i>settings</a>
+                    <div class="submenu">
+                        <a href="#">password</a>
+                        <a href="#">languages</a>
+                    </div>
+                </li>
+                <li class="item" >
+                    <a href="" class="btn"><i class="fas fa-angle-double-right fa-lg"></i>logout</a>
+                </li>
+            </div>
+        </div>
+        <script src="test.js"></script>
+    </body>
+</html>

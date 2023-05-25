@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.accord{
+    overflow: hidden;
+    width:805px;height:428px;
+    margin: 50px auto;
+    border: 2px solid #000;
+}
+
+.accord ul{
+    list-style-type: none;
+
+}
+.accord ul li{
+    float: left;border-left: 1px solid#000;
+    width:150px;position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.accord .title{
+    position: absolute;
+    left:0;bottom: 0;
+    width:640px;
+    background-color:rgba(0,0,0,0.5);
+}
+.accord .title a{
+    display: block;
+    text-decoration: none;
+    color:#fff; 
+    text-transform: capitalize;
+    padding:20px;font-size: 18px;
+}
+.accord ul:hover li{
+    width:40px;
+
+}
+.accord ul li:hover{
+    width:640px;
+
+}

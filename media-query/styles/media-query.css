@@ -1,0 +1,496 @@
+/*start main rules*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*end main rules*/
+
+
+/*start my frame work */
+
+.txt-center {
+    text-align: center;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+.container {
+    margin: auto;
+    padding: 0 15px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+    display: none;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.h1 {
+    font-size: 50px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.res-p {
+    line-height: 1.8;
+    text-align: center;
+    font-size: 40px !important;
+    color: navy !important
+}
+
+.unstyled {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+/*end my frame work */
+
+
+/*start header*/
+
+.header {
+    background-image: url('../images/pexels-pixabay-163165.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: top center;
+    height: 50vh;
+    position: relative;
+}
+
+.header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    column-rule: #fff;
+    background-color: rgba(10, 70, 233, 0.5);
+    color: #fff;
+}
+
+.header .overlay h1 {
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.header .overlay .plan {
+    border: 4px solid #fff;
+    font-size: 24px;
+    width: 48%;
+    padding: 20px;
+    margin: 30px 1%;
+    border-radius: 10px;
+}
+
+.header .overlay .order {
+    border: 4px solid #fff;
+    font-size: 24px;
+    padding: 20px;
+    margin: 10p 1%;
+    border-radius: 10px;
+}
+
+@media (max-width:767px) {
+  
+    .header .overlay .plan {
+        float: none;
+        margin-bottom: 20px;
+        margin: 0 auto 20px;
+        font-size: 20px;
+        width: 90%;
+        font-size: 18px;
+    }
+    .header .overlay .order {
+        width: 90%;
+        margin: auto;
+        font-size: 18px;
+    }
+    .header .overlay h1 {
+        font-size: 25px;
+        margin: 30px;
+    }
+}
+
+
+/*end header*/
+
+
+/*start features*/
+
+.features {
+    padding: 30px 0;
+}
+
+.features-items {
+    display: grid;
+    grid-template-rows: minmax(200px, auto);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.features .feat {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    color: #555;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
+
+.features-items .feat.fast {
+    grid-area: fast;
+}
+
+.features-items .feat.secure {
+    grid-area: secure;
+}
+
+.features-items .feat.cheap {
+    grid-area: cheap;
+}
+
+.features .feat h2 {
+    margin: 10px 0 8px;
+    position: relative
+}
+
+.features .feat p {
+    margin: 0;
+    color: #555;
+    line-height: 2;
+}
+
+@media (max-width:767px) {
+    .features-items {
+        grid-template-columns: 1fr;
+        grid-template-areas: "fast" "secure" "cheap"
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .features-items {
+        grid-template-columns: 1fr;
+        grid-template-areas: "fast" "secure" "cheap";
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .features-items {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "fast fast" "secure cheap"
+    }
+    .features .feat {
+        font-size: 20px
+    }
+}
+
+@media (min-width:1200px) {
+    .features-items {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "fast secure cheap"
+    }
+    .features .feat {
+        margin-bottom: 30px;
+        padding: 0 20px;
+        color: #555;
+        font-size: 25px;
+    }
+}
+
+
+/*end features*/
+
+
+/*start about us */
+
+.about-us {
+    background-color: #eee;
+    padding: 30px 0;
+}
+
+.about-us .res-p {
+    color: #777;
+    font-size: 22px;
+}
+
+
+/*end about us */
+
+
+/* start our work */
+
+.our-works {
+    padding: 70px 0;
+}
+
+.our-works .image {
+    overflow: hidden;
+}
+
+.our-works .image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.our-works .image img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .our-works .image {
+        width: 50%;
+        height: 400px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .our-works .image {
+        width: 33.3333%;
+        height: 400px;
+    }
+}
+
+@media (min-width:1200px) {
+    .our-works .image {
+        width: 25%;
+        height: 400px;
+    }
+}
+
+
+/* end our work */
+
+
+/* start our pricing table */
+
+.pricing-table,
+.pricing-table .h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.pricing-table .pricing-plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pricing-table .pricing-plan {
+    border: 2px solid #fff;
+    padding: 20px 0;
+}
+
+.pricing-table .pricing-plan h3 {
+    margin: 0 0 40px;
+    font-size: 25px;
+}
+
+.pricing-table .pricing-plan .pricing {
+    display: inline-block;
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #bfbfbf;
+}
+
+.pricing-table .pricing-plan ul {
+    line-height: 2;
+    font-size: 18px;
+}
+
+@media (max-width:767px) {
+    .pricing-table .pricing-plan {
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .pricing-table .pricing-plan {
+        width: 100%;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .pricing-table .pricing-plan {
+        width: 40%;
+    }
+    .pricing-table .pricing-plan.large {
+        width: 82%;
+    }
+}
+
+@media (min-width:1200px) {
+    .pricing-table .pricing-plans {
+        flex-wrap: nowrap;
+    }
+    .pricing-table .pricing-plan {
+        width: 33.33333%;
+    }
+}
+
+
+/* end or pricing table */
+
+
+/* start testimonials */
+
+.testimonials {
+    padding: 50px 0;
+}
+
+.testimonials-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(200px, auto);
+    grid-gap: 20px;
+}
+
+.testimonials-items .h1 {
+    font-size: 50px;
+    margin: 0 0 20;
+    color: #333;
+}
+
+.testimonials-items .testimonials-item {
+    background-color: #eee;
+    padding: 20px;
+    margin: 0 0 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.testimonials-item.ahmed {
+    grid-area: ahmed;
+}
+
+.testimonials-item.sayed {
+    grid-area: sayed;
+}
+
+.testimonials-item.khaled {
+    grid-area: khaled;
+}
+
+@media (max-width:767px) {
+    .testimonials-items {
+        grid-template-areas: "ahmed ahmed ahmed ahmed" "sayed sayed sayed sayed " "khaled khaled khaled khaled"
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .testimonials-items {
+        grid-template-areas: "ahmed ahmed ahmed ahmed" "sayed sayed sayed sayed " "khaled khaled khaled khaled"
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .testimonials-items {
+        grid-template-areas: "ahmed ahmed ahmed ahmed" "sayed sayed khaled khaled "
+    }
+}
+
+@media (min-width:1200px) {
+    .testimonials-items {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "khaled ahmed sayed"
+    }
+}
+
+
+/* end testimonials */
+
+
+/* start footer */
+
+.footer {
+    background-color: #000;
+}
+
+.footer .footer-items {
+    text-align: center;
+}
+
+.footer .footer-items ul {
+    width: 50%;
+    margin: auto;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer .footer-items ul li a {
+    display: block;
+    padding: 30px 0;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer .footer-items ul li a:hover {
+    color: #333
+}
+
+
+/* end footer */
+
+
+/* media query */
+
+
+/* extra small [mobile & tablet] rules*/
+
+@media (max-width:767px) {}
+
+
+/* small screen rules*/
+
+@media (min-width:768px) and (max-width:991px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+/* medium screen rules*/
+
+@media (min-width:992px) and (max-width:1199px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* large screen rules*/
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}

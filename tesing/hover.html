@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>fancy buttons</title>
+        <style>
+            *,*::after,*::before{
+                box-sizing: border-box;
+            }
+            :root{
+                --background-color: #e3e3e3;
+                --border-size: 4px;
+                --accent-color: #0af;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                margin: 0;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            button{margin: 1rem;}
+            .btn{
+                background-color: var(--background-color);
+                color: #222;
+                font-size: 20px;
+                padding: .5em 1em;
+                border: none;
+                outline: none;
+                position: relative;
+                cursor: pointer;
+                width: 250px;
+                height: 50px;
+            
+               
+            }
+            .btn:after,.btn::before{
+                content:'' ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transition: all 0.4s ease-in-out;
+                z-index: -1;
+              
+            }
+            .btn.btn-border-pop::after{
+                border:var(--border-size) solid var(--accent-color);
+                opacity: 1;
+            }
+            .btn.btn-border-pop:hover::after{
+                top: -8px;
+                left: -8px;
+                right: -8px;
+                bottom: -8px;
+                opacity: 1;
+            }
+            @keyframes hvr-ripple-out {
+                100% {
+                    top: -12px;
+                    right: -12px;
+                    bottom: -12px;
+                    left: -12px;
+                    opacity: 0;
+                }
+                }
+                .hvr-ripple-out::after {
+                border: var(--accent-color) solid 6px;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                }
+                .hvr-ripple-out:hover::after{
+                -webkit-animation-name: hvr-ripple-out;
+                animation-name: hvr-ripple-out;
+            }
+            .ltr-effect::after{
+                transform: scaleX(0);
+                background-color:var(--accent-color);
+                transform-origin: left; 
+            }
+            .ltr-effect{z-index:1;}
+            .ltr-effect:hover{color: #fff;}
+            .ltr-effect:hover::after{transform:scaleX(1)}
+           
+            .btn-background-rictangel{
+                z-index: 1;
+                overflow: hidden;
+            }
+            .btn-background-rictangel::after{
+                transform: scale(0);
+                background-color:var(--accent-color);
+                z-index: -1;
+            }
+            .btn-background-rictangel:hover{color: #fff;}
+
+            .btn-background-rictangel:hover::after{transform: scale(1.5)}
+        
+            .btn-background-circle{
+                z-index: 1;
+                overflow: hidden;
+            }
+            .btn-background-circle::after{
+                border-radius: 100%;
+                transform: scale(0);
+                background-color:var(--accent-color);
+                z-index: -1;
+            }
+            .btn-background-circle{z-index: 1}
+            .btn-background-circle:hover{color: #fff;}
+            .btn-background-circle:hover::after{ transform: scale(1.5)}
+
+            .btn-border-underline::after{
+                top:auto;
+                transform: scaleX(0);
+                background-color:var(--accent-color);
+                z-index: -1;
+                height: 3px;
+            }
+            .btn-border-underline{z-index: 1;}
+      
+            .btn-border-underline:hover::after{transform:scaleX(1)}
+
+            .btn-border-underline-left:after{
+                top:auto;
+                transform: scaleX(0);
+                background-color:var(--accent-color);
+                z-index: -1;
+                height: 3px;
+                transform-origin: left;
+                /* or you can use right 100% and then on hove 0 */
+            }
+            .btn-border-underline-left{z-index:1}
+            .btn-border-underline-left:hover::after{
+                transform: scaleX(1);
+            }
+
+            .border{ transition: all 0.2s ease-in-out;}
+
+            .border:hover{border:3px solid var(--accent-color)}
+
+            .custom{z-index: 1;}
+            
+            .custom::before{
+                border-width: 2px 0;
+                border-color: var(--accent-color);
+                border-style: solid;
+                transition-delay:0.2s;
+                transform-origin: left;
+                transform: scalex(0); 
+            }
+            .custom:hover::before{transform: scalex(1);}
+
+            .custom::after{
+                transform: scaley(0);
+                border-width: 0 2px; /*x y*/
+                border-color: var(--accent-color);
+                border-style: solid;
+            }
+            .custom:hover::after{transform: scaley(1);}
+
+            .hvr-reveal {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+                overflow: hidden;
+            }
+            .hvr-reveal:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border-color: #2098D1;
+                border-style: solid;
+                border-width: 0;
+                -webkit-transition-property: border-width;
+                transition-property: border-width;
+                -webkit-transition-duration: 0.1s;
+                transition-duration: 0.1s;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+            }
+            .hvr-reveal:hover:before, .hvr-reveal:focus:before, .hvr-reveal:active:before {
+                border-width: 4px;
+            }
+
+            .hvr-reveal-botm {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+                overflow: hidden;
+            }
+            .hvr-reveal-botm:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                right: 0;
+                top: auto;
+                bottom: 0;
+                height: 4px;
+                transform:translateY(4px);
+                transition: all 0.3s ease-in-out;
+                background-color: #0af;
+            }
+            .hvr-reveal-botm:hover:before, .hvr-reveal:focus:before, .hvr-reveal:active:before {
+                transform:translateY(0px);
+            }
+            /* Float Shadow */
+            .hvr-float-shadow {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: transform;
+                transition-property: transform;
+            }
+        .hvr-float-shadow:before {
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+            content: '';
+            top: 100%;
+            left: 5%;
+            height: 10px;
+            width: 90%;
+            opacity: 0;
+            background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            /* W3C */
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform, opacity;
+            transition-property: transform, opacity;
+        }
+        .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+            /* move the element up by 5px */
+        }
+        .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+        opacity: 1;
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+        }
+        .test{
+              background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            height: 40px;
+        }
+
+        </style>
+    </head>
+    <body>
+            <button class="btn btn-border-pop">border pop</button>
+            <button class="btn hvr-ripple-out">ripple-out</button>
+            <button class="btn ltr-effect">background slide </button>
+            <button class="btn btn-background-circle">background circle</button>
+            <button class="btn btn-background-rictangel">background rictangel</button>
+            <button class="btn btn-border-underline"> underline middle</button>
+            <button class="btn btn-border-underline-left"> underline from left</button>
+            <button class="btn custom">custom</button>
+            <button class=" btn hvr-reveal">border effect</button>
+            <button class="btn hvr-reveal-botm">border bottom/right</button>
+            <button class="btn hvr-float-shadow">float shadow</button>
+            <div class=" btn test"></div>
+    </body>
+</html>
